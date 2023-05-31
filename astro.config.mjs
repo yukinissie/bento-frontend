@@ -6,9 +6,9 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import analogjsangular from "@analogjs/astro-angular";
 
-import lit from "@astrojs/lit";
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), solidJs(), preact(), svelte(), vue(), analogjsangular(), lit()]
+  integrations: [react(), solidJs(), preact(), svelte(), vue(), analogjsangular(), alpinejs()]
 });
