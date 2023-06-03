@@ -8,7 +8,12 @@
         "build": "astro build",
         "preview": "astro preview",
         "astro": "astro",
-        "new": "hygen generator"
+        "new": "hygen generator",
+        "sbre": "storybook dev -p 6006 -c .storybook/.react",
+        "sbvu": "storybook dev -p 6006 -c .storybook/.vue",
+        "sbsv": "storybook dev -p 6006 -c .storybook/.svelte",
+        "sbpr": "storybook dev -p 6006 -c .storybook/.preact",
+        "sbso": "storybook dev -p 6006 -c .storybook/.solid"
     },
     "dependencies": {
         "@analogjs/astro-angular": "0.2.0-beta.14",
@@ -28,6 +33,8 @@
         "@astrojs/solid-js": "^2.2.0",
         "@astrojs/svelte": "^2.2.0",
         "@astrojs/vue": "^2.2.1",
+        "@storybook/addon-svelte-csf": "^3.0.2",
+        "@storybook/react": "^7.0.18",
         "@types/alpinejs": "^3.0.0",
         "@types/react": "^18.0.21",
         "@types/react-dom": "^18.0.6",
@@ -41,12 +48,31 @@
         "solid-js": "^1.4.3",
         "svelte": "^3.54.0",
         "tslib": "^2.4.0",
-        "vue": "^3.2.30",
+        "vite-plugin-solid": "^2.7.0",
+        "vue": "^3.3.4",
         "zone.js": "^0.13.0"
     },
     "devDependencies": {
+        "@storybook/addon-essentials": "^7.0.18",
+        "@storybook/addon-interactions": "^7.0.18",
+        "@storybook/addon-links": "^7.0.18",
+        "@storybook/blocks": "^7.0.18",
+        "@storybook/preact": "^7.0.18",
+        "@storybook/preact-vite": "^7.0.18",
+        "@storybook/react-vite": "^7.0.18",
+        "@storybook/svelte": "^7.0.18",
+        "@storybook/svelte-vite": "^7.0.18",
+        "@storybook/testing-library": "^0.0.14-next.2",
+        "@storybook/vue": "^7.0.18",
+        "@storybook/vue-vite": "^7.0.18",
+        "@storybook/vue3": "^7.0.18",
+        "@storybook/vue3-vite": "^7.0.18",
         "hygen": "^6.2.11",
         "prettier": "^2.8.8",
-        "prettier-plugin-astro": "^0.9.1"
+        "prettier-plugin-astro": "^0.9.1",
+        "prop-types": "^15.8.1",
+        "storybook": "^7.0.18",
+        "storybook-solidjs": "^1.0.0-beta.2",
+        "storybook-solidjs-vite": "^1.0.0-beta.2"
     }
 }
