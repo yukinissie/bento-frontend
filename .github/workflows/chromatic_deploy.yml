@@ -21,9 +21,6 @@ jobs:
       - run: pnpm i --frozen-lockfile
         # 👇 Adds Chromatic as a step in the workflow
       - id: react
-        environment:
-          name: Publish to Chromatic react
-          url: ${{ steps.react.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -33,9 +30,6 @@ jobs:
           buildScriptName: "build-storybook-react"
       
       - id: vue
-        environment:
-          name: Publish to Chromatic vue
-          url: ${{ steps.vue.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -45,9 +39,6 @@ jobs:
           buildScriptName: "build-storybook-vue"
       
       - id: svelte
-        environment:
-          name: Publish to Chromatic svelte
-          url: ${{ steps.svelte.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -57,9 +48,6 @@ jobs:
           buildScriptName: "build-storybook-svelte"
       
       - id: preact
-        environment:
-          name: Publish to Chromatic preact
-          url: ${{ steps.preact.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -69,9 +57,6 @@ jobs:
           buildScriptName: "build-storybook-preact"
       
       - id: solid
-        environment:
-          name: Publish to Chromatic solid
-          url: ${{ steps.solid.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
