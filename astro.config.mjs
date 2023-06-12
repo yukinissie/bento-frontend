@@ -5,10 +5,13 @@ import preact from "@astrojs/preact";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import analogjsangular from "@analogjs/astro-angular";
-
 import alpinejs from "@astrojs/alpinejs";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), solidJs(), preact(), svelte(), vue(), analogjsangular(), alpinejs()]
+  integrations: [react(), solidJs(), preact(), svelte(), vue(), analogjsangular(), alpinejs()],
+  output: "server",
+  adapter: vercel()
 });
