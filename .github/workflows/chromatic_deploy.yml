@@ -8,14 +8,6 @@ jobs:
   chromatic-deployment:
     # Operating System
     runs-on: ubuntu-latest
-
-    outputs:
-      react: ${{ steps.react.outputs.buildUrl }}
-      vue: ${{ steps.vue.outputs.buildUrl }}
-      svelte: ${{ steps.svelte.outputs.buildUrl }}
-      preact: ${{ steps.preact.outputs.buildUrl }}
-      solid: ${{ steps.solid.outputs.buildUrl }}
-
     
     # Job steps
     steps:
@@ -29,7 +21,9 @@ jobs:
       - run: pnpm i --frozen-lockfile
         # 👇 Adds Chromatic as a step in the workflow
       - id: react
-        name: Publish to Chromatic react
+        environment:
+          name: Publish to Chromatic react
+          url: ${{ steps.react.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -39,7 +33,9 @@ jobs:
           buildScriptName: "build-storybook-react"
       
       - id: vue
-        name: Publish to Chromatic vue
+        environment:
+          name: Publish to Chromatic vue
+          url: ${{ steps.vue.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -49,7 +45,9 @@ jobs:
           buildScriptName: "build-storybook-vue"
       
       - id: svelte
-        name: Publish to Chromatic svelte
+        environment:
+          name: Publish to Chromatic svelte
+          url: ${{ steps.svelte.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -59,7 +57,9 @@ jobs:
           buildScriptName: "build-storybook-svelte"
       
       - id: preact
-        name: Publish to Chromatic preact
+        environment:
+          name: Publish to Chromatic preact
+          url: ${{ steps.preact.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -69,7 +69,9 @@ jobs:
           buildScriptName: "build-storybook-preact"
       
       - id: solid
-        name: Publish to Chromatic solid
+        environment:
+          name: Publish to Chromatic solid
+          url: ${{ steps.solid.outputs.buildUrl }}
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
