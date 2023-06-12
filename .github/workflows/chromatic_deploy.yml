@@ -9,8 +9,6 @@ jobs:
     # Operating System
     runs-on: ubuntu-latest
     
-    outputs: 
-      deploy_url: ${{ steps.publish.outputs.buildUrl }}
     # Job steps
     steps:
       - uses: actions/checkout@v1
@@ -22,11 +20,47 @@ jobs:
           version: 7.28.0
       - run: pnpm i --frozen-lockfile
         # 👇 Adds Chromatic as a step in the workflow
-      - name: Publish to Chromatic
-        id: publish
+      - name: Publish to Chromatic react
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitOnceUploaded: true
+          buildScriptName: "build-storybook-react"
+      
+      - name: Publish to Chromatic vue
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
+          buildScriptName: "build-storybook-vue"
+      
+      - name: Publish to Chromatic svelte
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
+          buildScriptName: "build-storybook-svelte"
+      
+      - name: Publish to Chromatic preact
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
+          buildScriptName: "build-storybook-preact"
+      
+      - name: Publish to Chromatic solid
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
+          buildScriptName: "build-storybook-solid"
