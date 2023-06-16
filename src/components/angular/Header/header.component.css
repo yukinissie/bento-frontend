@@ -1,0 +1,31 @@
+.header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 1433px;
+    position: absolute;
+    width: 1920px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    border-bottom: 1px solid #000000;
+  }
+
+.service-name {
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 30px;
+gap: 5px;
+
+width: 220px;
+height: 100px;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
