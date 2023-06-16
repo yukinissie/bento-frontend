@@ -1,7 +1,7 @@
 ---
 to: src/components/preact/<%= name %>/<%= name %>.stories.js
 ---
-
+/** @jsxImportSource preact */
 import { <%= name %> } from "./<%= name %>";
 const meta = {
     title: "Example/<%= name %>",

@@ -1,6 +1,7 @@
 ---
 to: src/components/solid/<%= name %>/<%= name %>.stories.js
 ---
+/** @jsxImportSource solid */
 import { <%= name %> } from './<%= name %>';
 export default {
   title: 'Example/<%= name %>',
