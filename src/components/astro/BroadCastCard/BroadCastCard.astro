@@ -1,0 +1,16 @@
+---
+import TimeBetween from "../../vue/TimeBetween/TimeBetween.vue";
+import UserCard from "./../../vue/UserCard/UserCard.vue";
+name: 'BroadCastCard'
+const {title,username,image_url,start_time,end_time} = Astro.props
+
+---
+<button class="flex flex-col p-5 w-[100%] hover:bg-slate-100">
+    <div class=" font-semibold p-5 ">{title}</div>
+    <div class="pl-5 flex flex-row items-center w-[100%]">
+        <div class="flex-auto ">
+            <UserCard username={username} iconPath={image_url}/>
+        </div>
+        <TimeBetween startTime={start_time} endTime={end_time}/>
+    </div>
+</button>
