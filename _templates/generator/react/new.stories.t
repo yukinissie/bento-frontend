@@ -1,6 +1,7 @@
 ---
 to: src/components/react/<%= name %>/<%= name %>.stories.js
 ---
+/** @jsxImportSource react */
 import { <%= name %> } from './<%= name %>';
 export default {
   title: 'Example/<%= name %>',
