@@ -1,0 +1,21 @@
+---
+import BroadCastList from '../../components/astro/BroadCastList/BroadCastList.astro';
+import VerticalDivider from '../../components/astro/VerticalDivider/VerticalDivider.astro';
+import { GroupList } from "../../components/react/GroupList/GroupList";
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="flex flex-row p-5">
+		<div class="w-[50vw] h-[90vh]">
+			<GroupList/>
+		</div>
+		<VerticalDivider/>
+		<div class="w-[50vw] h-[90vh]">
+			<BroadCastList/>
+		</div>
+	</div>
+</Layout>
+
+<style>
+</style>

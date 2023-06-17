@@ -1,0 +1,18 @@
+---
+import BroadCastCard from "../BroadCastCard/BroadCastCard.astro";
+import Divider from "../Divider/Divider.astro";
+name: 'BroadCastList'
+const demoData = [
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+    { title:"hoge",username:"hogehoge",image_url:"hoge.png",start_time:"2023-06-17T05:21:56.000Z",end_time:"2023-06-17T05:21:56.000Z"},
+]
+---
+<div class=" overflow-auto max-h-[80vh]">
+{demoData.map((broadCast)=>(<><BroadCastCard {...broadCast}/><Divider/></>))}
+</div>

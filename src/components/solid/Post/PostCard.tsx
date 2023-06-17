@@ -1,5 +1,5 @@
+import React from "react";
 import { ChatBubbleOvalLeftEllipsisIcon, HeartIcon } from "../icons/icons";
-
 export const PostCard = ({
     description,
     likes,
