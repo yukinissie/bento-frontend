@@ -4,7 +4,6 @@ const FormatDate = ({ dateString }) => {
     const date = parseISO(dateString);
     const now = new Date();
     const subSec = parseInt((now - date) / 1000);
-    console.log(subSec);
     const diff =
         subSec < 60
             ? parseInt(subSec) + "秒前"
