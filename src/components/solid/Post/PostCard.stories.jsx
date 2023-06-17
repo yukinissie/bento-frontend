@@ -1,7 +1,7 @@
-import { Post } from "./Post";
+import { PostCard } from "./PostCard";
 export default {
-    title: "Example/Post",
-    component: Post,
+    title: "Example/PostCard",
+    component: PostCard,
     tags: ["autodocs"],
     parameters: {
         layout: "fullscreen",
@@ -12,4 +12,4 @@ const args = {
     likes: ["hoge", "huga"],
     description: "hogehogehogehoge",
 };
-export const Default = () => <Post {...args} />;
+export const Default = () => <PostCard {...args} />;

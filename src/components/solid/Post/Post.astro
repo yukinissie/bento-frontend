@@ -1,0 +1,24 @@
+---
+import FormatDate from "~/components/react/Date/FormatDate";
+import UserCard from "~/components/vue/UserCard/UserCard.vue";
+import PostCard from "./PostCard";
+name: 'Post'
+
+const username = "hoge"
+const iconPath = "hoge.png"
+const date ="2023-06-17T05:21:56.000Z"
+const description ="this is description"
+const likes = ["hoge","huga"]
+const replies =3
+
+
+---
+<div>
+    <div class="flex flex-row">
+        <div class="flex-auto">
+            <UserCard username={username} iconPath={iconPath}/>
+        </div>
+        <FormatDate dateString={date}/>
+    </div>
+    <PostCard description={description} likes={likes} replies={replies}/>
+</div>

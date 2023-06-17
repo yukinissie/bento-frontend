@@ -1,17 +1,9 @@
 import { ChatBubbleOvalLeftEllipsisIcon, HeartIcon } from "../icons/icons";
 
-export const Post = ({
-    description,
-    likes,
-    replies,
-}: {
-    description: string;
-    likes: string[];
-    replies: number;
-}) => {
+export const PostCard = ({ description, likes, replies }) => {
     return (
-        <>
-            <div className=" flex flex-row items-center p-3 gap-10 ">
+        <div className="pl-10">
+            <div className=" flex flex-row items-center gap-10 ">
                 {description}
             </div>
             <div
@@ -42,6 +34,7 @@ export const Post = ({
                     <div>{replies}</div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
+export default PostCard;
